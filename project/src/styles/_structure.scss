@@ -1,0 +1,46 @@
+article {
+	padding: 2.5em 10% 10em;
+
+	@media ( min-width: 800px ) {
+		padding: 2.5em 20% 5em 10%;
+	}
+
+	@media ( min-width: 1800px ) {
+		padding: 2.5em 30% 5em 10%;
+	}
+
+}
+
+time {
+	float: right;
+
+	padding-left: 1em;
+}
+
+time + h4 {
+	border-top-style: solid;
+	border-top-width: 1px;
+}
+
+ul {
+	margin-left: 1em;
+}
+
+.linkList {
+	margin-top: 1em;
+
+	p {
+		display: inline-block;
+
+		margin-top: 0em;
+		margin-right: 2em;
+
+		white-space: nowrap;
+		overflow: hidden;
+		text-overflow: ellipsis;
+	}
+}
+
+.no-print {
+	display: none;
+}
