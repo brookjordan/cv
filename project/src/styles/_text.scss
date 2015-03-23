@@ -9,7 +9,7 @@ body {
 h1 {
 	margin-top: 0em;
 
-	font-size: 1.4em;
+	font-size: 1.3em;
 	font-weight: 700;
 }
 
@@ -19,33 +19,28 @@ h2 {
 }
 
 h3 {
-	margin-top: 1.2em;
+	margin-top: 1.5em;
 
 	font-weight: 700;
-
-	+ p {
-		margin-top: 0.2em;
-	}
 }
 
 h4 {
-	margin-top: 2em;
+	margin-top: 1em;
 
-	font-size: 1.45em;
-
-	h3 + time + & {
+	//	For job titles
+	h3 + div time + & {
 		margin-top: 0em;
 	}
 }
 
 time {
-	margin-top: 4.4em;
+	margin-top: .25em;
 
 	font-size: 0.8em;
 	text-align: right;
 
-	h3 + & {
-		margin-top: 0.8em;
+	hgroup & {
+		margin-top: .5em;
 	}
 }
 
@@ -53,4 +48,19 @@ p {
 	margin-top: 1em;
 
 	font-family: serif;
+
+	h3 + & {
+		margin-top: 0.2em;
+	}
+
+	h3 + time + & {
+		margin-top: .5em;
+	}
+
+	li & {
+		&:first-child {
+			margin-top: .5em;
+		}
+	}
+
 }

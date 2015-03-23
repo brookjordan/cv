@@ -2,25 +2,33 @@
 <html lang="en">
 <head>
 	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<title>cv</title>
 	<link rel="stylesheet" href="/css/base.min.css">
 </head>
 <body>
-	<article>
-		<!-- Name and Contact info -->
-		<section itemscope itemtype="http://schema.org/Person">
-			<h1 itemprop="name">Brook Jordan</h1>
+	<article itemscope itemtype="http://schema.org/Person">
+		<link itemprop="sameAs" href="http://www.brookjordan.uk/"/>
 
-			<div class="linkList">
-				<p itemprop="name"><a href="#">brkjrdn@gmail.com</a></p>
-				<p itemprop="telephone"><a href="#">+44 (0) 7786 511 155</a></p>
-				<p itemprop="webpage"><a href="#">brookjordan.co.uk</a></p>
-			</div>
+		<!--	Name and Contact info	-->
+		<section>
+			<h1>
+				<span itemprop="givenName">Brook</span>
+				<span itemprop="familyName">Jordan</span>
+			</h1>
+
+			<nav>
+				<p itemprop="email"><a href="mailto:brkjrdn@gmail.com">brkjrdn@gmail.com</a></p>
+				<p itemprop="telephone"><a href="tel:+447786511155">+44 (0) 7786 511 155</a></p>
+				<p itemprop="url"><a href="http://brookjordan.uk/">brookjordan.uk</a></p>
+			</nav>
 		</section>
 
 
 
-		<!-- Brief intro about yourself -->
+
+
+		<!--	Personal statement	-->
 		<section>
 			<h2>Personal statement</h2>
 
@@ -34,62 +42,331 @@
 
 
 
-		<!-- Key skills -->
-		<section>
-			<h2>Key skills</h2>
 
-			<h3>Future thinking</h3>
-			<p>By researching multiple solutions I facilitate future improvements and target possible problems before they arise.</p>
 
-			<h3>Adaptable</h3>
-			<p>I synergise learned skills to give me a better overview for future projects - aiding faster, more adaptable workflows.</p>
+		<!--	Key skills	-->
+		<section itemscope itemtype="http://schema.org/ItemList">
+			<h2 itemprop="name">Key skills</h2>
+
+			<div itemprop="itemListElement" itemscope itemtype="http://schema.org/Thing">
+				<h3 itemprop="name">Future thinking</h3>
+				<p itemprop="description">By researching multiple solutions I facilitate future improvements and target possible problems before they arise.</p>
+			</div>
+
+			<div itemprop="itemListElement" itemscope itemtype="http://schema.org/Thing">
+				<h3 itemprop="name">Adaptable</h3>
+				<p itemprop="description">I synergise learned skills to give me a better overview for future projects - aiding faster, more adaptable workflows.</p>
+			</div>
+
+			<div itemprop="itemListElement" itemscope itemtype="http://schema.org/Thing">
+				<h3 itemprop="name">Team player</h3>
+				<p itemprop="description">I have worked successfully in scrum teams with artists, designers, developers and clients - contributing and learning from the group in each situation.</p>
+			</div>
+
+			<div itemprop="itemListElement" itemscope itemtype="http://schema.org/Thing">
+				<h3 itemprop="name">Self starter</h3>
+				<p itemprop="description">I am capable of taking responsibility for managing my own projects’ time-lines and priorities to meet deadlines, while documenting de-prioritised issues to tackle later.</p>
+			</div>
+
+			<div itemprop="itemListElement" itemscope itemtype="http://schema.org/Thing">
+				<h3 itemprop="name">Attention to detail</h3>
+				<p itemprop="description">The desire for perfection drives me to respect the smallest details, keeping designs tight, interactions fluid, and code efficient and maintainable.</p>
+			</div>
 		</section>
 
 
 
-		<!-- Technical skills -->
-		<section>
-			<h2>Technical skills</h2>
+
+
+		<!--	Technical skills	-->
+		<section itemscope itemtype="http://schema.org/ItemList">
+			<h2 itemprop="name">Technical skills</h2>
 
 			<ul>
 				<li><p>Hand coding to the following web standards:</p></li>
 					<ul>
-						<li><p>HTML (4, 5, X)</p></li>
-						<li><p>CSS (2, 3)</p></li>
-						<li><p>JavaScript (jQuery, Angular, vanilla)</p></li>
+						<li><p itemprop="itemListElement">HTML (4, 5, X)</p></li>
+						<li><p itemprop="itemListElement">CSS (2, 3)</p></li>
+						<li><p itemprop="itemListElement">JavaScript (jQuery, Angular, vanilla)</p></li>
 					</ul>
+				</li>
+
+				<li><p>Apple software, including:</p></li>
+					<ul>
+						<li><p itemprop="itemListElement">iWork</p></li>
+						<li><p itemprop="itemListElement">Final Cut Pro</p></li>
+						<li><p itemprop="itemListElement">Motion</p></li>
+						<li><p itemprop="itemListElement">Logic</p></li>
+					</ul>
+				</li>
+
+				<li><p>3D software including:</p></li>
+					<ul>
+						<li><p itemprop="itemListElement">Silo</p></li>
+						<li><p itemprop="itemListElement">Cinema 4D</p></li>
+						<li><p itemprop="itemListElement">Electric Image</p></li>
+					</ul>
+				</li>
+
+				<li>
+					<p itemprop="itemListElement">Microsoft Office</p>
+				</li>
+
+				<li>
+					<p itemprop="itemListElement">BA (hons) Illustration with Animation</p>
+				</li>
+
+				<li>
+					<p itemprop="itemListElement">Foundation in art</p>
 				</li>
 			</ul>
 		</section>
 
 
 
-		<!-- Employment history -->
+
+
+		<!--	Employment history	-->
 		<section>
 			<h2>Employment history</h2>
 
-			<h3>Perform Group</h3>
-			<time>Mar&nbsp;2013&nbsp;- Apr&nbsp;2014</time>
-			<h4>Web developer</h4>
-			<p>
-				Responsible for creating live streaming websites, supporting eCommerce, CMS integration and curated data feeds.
-			</p>
 
-			<time>Dec&nbsp;2011&nbsp;- Mar&nbsp;2013</time>
-			<h4>Junior web developer</h4>
-			<p>
-				Having adapted and learned quickly in the core web development team, I progressed quickly to work on high profile projects within dedicated scrum teams.
-			</p>
+
+			<div itemprop="affiliation" itemscope itemtype="http://schema.org/Organization">
+				<h3 itemprop="name">Betway</h3>
+
+				<div itemscope itemtype="http://schema.org/OrganizationRole">
+					<time>
+						<span itemprop="startDate">Jun&nbsp;2014</span>&nbsp;-
+						<span itemprop="endDate">Mar&nbsp;2015</span>
+					</time>
+					<h4 itemprop="roleName">Web developer</h4>
+					<p itemprop="description">
+						Responsible for creating live streaming websites, supporting eCommerce, CMS integration and curated data feeds.
+					</p>
+				</div>
+
+				<link itemprop="sameAs" href="http://en.wikipedia.org/wiki/Betway"/>
+			</div>
+
+
+
+			<div itemprop="affiliation" itemscope itemtype="http://schema.org/Organization">
+				<h3 itemprop="name">Perform Group</h3>
+
+				<div itemscope itemtype="http://schema.org/OrganizationRole">
+					<time>
+						<span itemprop="startDate">Mar&nbsp;2013</span>&nbsp;-
+						<span itemprop="endDate">Apr&nbsp;2014</span>
+					</time>
+					<h4 itemprop="roleName">Web developer</h4>
+
+					<div itemprop="description">
+						<p>
+							Responsible for creating live streaming websites, supporting eCommerce, CMS integration and curated data feeds.
+						</p>
+						<p>
+							Work included managing, designing, writing, and correcting:
+						</p>
+						<ul>
+							<li><p>websites, pages and templates</p></li>
+							<li><p>user interface and user experience design</p></li>
+							<li><p>webmaster, client, customer and technical documentation</p></li>
+						</ul>
+						<p>
+							Key Clients include:
+						</p>
+						<ul>
+							<li><p><a href="http://www.toppfotball.no/">Toppfotball</a></p></li>
+							<li><p><a href="http://www.leedsunited.com/">Leeds United</a></p></li>
+							<li><p>Chelsea FC</p></li>
+							<li><p><a href="http://www.tennistv.com/">Tennis TV</a></p></li>
+							<li><p>Other blue chips</p></li>
+						</ul>
+						<p>
+							During my time at Perform I created responsive websites incorporating live and historical sports data, live video and audio streams, and client-driven CMS data into hand-coded websites organised within the companies own IDE, primarily using the Freemarker templating language.
+						</p>
+						<p>
+							Throughout all stages of development I bear in mind the perspectives of a designer, client / webmaster and customer - as well as a developer - building great experiences for all involved before, during, and after builds. This workflow has garnered excellent feedback, with the trust that I gain putting me in direct contact with all sectors, easing the burden of stakeholders - allowing them to focus on other key responsibilities.
+						</p>
+					</div>
+				</div>
+
+
+
+				<div itemscope itemtype="http://schema.org/OrganizationRole">
+					<time>
+						<span itemprop="startDate">Dec&nbsp;2011</span>&nbsp;-
+						<span itemprop="endDate">Mar&nbsp;2013</span>
+					</time>
+					<h4 itemprop="roleName">Junior web developer</h4>
+
+					<div itemprop="description">
+						<p>
+							Having adapted and learned quickly in the core web development team, I progressed quickly to work on high profile projects within dedicated scrum teams.
+						</p>
+					</div>
+				</div>
+
+				<link itemprop="sameAs" href="http://en.wikipedia.org/wiki/Perform_Group"/>
+			</div>
+
+
+
+			<div itemprop="affiliation" itemscope itemtype="http://schema.org/Organization">
+				<h3 itemprop="name">Research Now</h3>
+
+				<div itemscope itemtype="http://schema.org/OrganizationRole">
+					<time>
+						<span itemprop="startDate">Jun&nbsp;2014</span>&nbsp;-
+						<span itemprop="endDate">Mar&nbsp;2015</span>
+					</time>
+					<h4 itemprop="roleName">Intern designer</h4>
+
+					<div itemprop="description">
+						<p>
+							Responsibilities included designing, managing and maintaining:
+						</p>
+						<ul>
+							<li><p>print design for fliers, leaflets etc</p></li>
+							<li><p>various graphics and infographics</p></li>
+							<li><p>Flash, jpeg and gif website banners</p></li>
+							<li><p>HTML and CSS for email newsletters and mini sites</p></li>
+							<li><p>printed give-aways, such as beermats, chocolate wrappers, wine bottle collars</p></li>
+						</ul>
+					</div>
+				</div>
+
+				<link itemprop="sameAs" href="http://en.wikipedia.org/wiki/Research_Now"/>
+			</div>
+
+
 
 			<h4>Contract jobs</h4>
 			<p>
 				Key clients include:
 			</p>
 			<ul>
-				<li><p>Tesco</p></li>
-				<li><p>Research Now</p></li>
-				<li><p>X1 ltd.</p></li>
+				<li itemprop="affiliation" itemscope itemtype="http://schema.org/Organization">
+					<p itemprop="name">Tesco</p>
+
+					<link itemprop="sameAs" href="http://en.wikipedia.org/wiki/Tesco"/>
+				</li>
+				<li itemprop="affiliation" itemscope itemtype="http://schema.org/Organization">
+					<p itemprop="name">X1 ltd.</p>
+
+					<link itemprop="sameAs" href="http://x1.ltd.uk/"/>
+				</li>
 			</ul>
+		</section>
+
+
+
+
+
+		<!--	Education history	-->
+		<section>
+			<h2>Education</h2>
+
+			<div itemprop="alumniOf" itemscope itemtype="http://schema.org/EducationalOrganization">
+				<h3 itemprop="name">Manchester Metropolitan University</h3>
+				<div>
+					<time>
+						2006&nbsp;- 2009
+					</time>
+					<h4>BA Hons Illustration With Animation</h4>
+				</div>
+				<p itemprop="description">With a focus on 3D animation, it turned out the university wasn't well equipped for what I wanted to do. So I struggled through with little help, creating four final projects, instead of the usual one.</p>
+
+				<link itemprop="sameAs" href="http://en.wikipedia.org/wiki/Manchester_Metropolitan_University"/>
+			</div>
+
+
+
+			<div itemprop="alumniOf" itemscope itemtype="http://schema.org/EducationalOrganization">
+				<h3 itemprop="name">Lincoln College</h3>
+				<div>
+					<time>
+						2005&nbsp;- 2006
+					</time>
+					<h4>BA Hons Foundation in Art</h4>
+				</div>
+				<p itemprop="description">Focused on Illustration, I spent most of my time with life-drawing and my final project was a CG 3D animated music video for a friend's band.</p>
+
+				<link itemprop="sameAs" href="http://en.wikipedia.org/wiki/Lincoln_College,_Lincolnshire"/>
+			</div>
+
+
+
+			<div itemprop="alumniOf" itemscope itemtype="http://schema.org/EducationalOrganization">
+				<h3 itemprop="name">The Priory LSST</h3>
+				<div>
+					<time>
+						2003&nbsp;- 2005
+					</time>
+					<h4>A levels</h4>
+				</div>
+				<p itemprop="description">Maths, Physics, Systems and Control, Art</p>
+
+				<div>
+					<time>
+						2001&nbsp;- 2003
+					</time>
+					<h4>GCSEs</h4>
+				</div>
+				<p itemprop="description">Maths, Separate sciences, Art, Electronics and 9 others.</p>
+
+				<link itemprop="sameAs" href="http://en.wikipedia.org/wiki/The_Priory_Academy_LSST"/>
+			</div>
+
+
+			<p class="award" itemprop="award">BA Hons Illustration With Animation</p>
+
+			<p class="award" itemprop="award">BA Hons Foundation in Art</p>
+
+			<p class="award" itemprop="award">A level in Maths</p>
+			<p class="award" itemprop="award">A level in Art</p>
+			<p class="award" itemprop="award">A level in Systems and Control</p>
+			<p class="award" itemprop="award">A level in Physics</p>
+
+			<p class="award" itemprop="award">GCSE Maths</p>
+			<p class="award" itemprop="award">GCSE Art</p>
+			<p class="award" itemprop="award">GCSE Electronics</p>
+			<p class="award" itemprop="award">GCSE Separate sciences</p>
+		</section>
+
+
+
+
+
+		<!--	Hobbies & interests	-->
+		<section itemscope itemtype="http://schema.org/ItemList">
+			<h2 itemprop="name">Hobbies &amp; interests</h2>
+
+			<div itemprop="itemListElement" itemscope itemtype="http://schema.org/Thing">
+				<h3 itemprop="name">Guitar & recording</h3>
+				<p itemprop="description">Having taught myself guitar while at University, I still enjoy small recording sessions in my bedroom. Just for fun, though.</p>
+			</div>
+
+			<div itemprop="itemListElement" itemscope itemtype="http://schema.org/Thing">
+				<h3 itemprop="name">Photography</h3>
+				<p itemprop="description">I am familiar with modern point and shoot, and SLR cameras - taking photos while out-and-about. I currently own the fantastic Sony RX100.</p>
+			</div>
+
+			<div itemprop="itemListElement" itemscope itemtype="http://schema.org/Thing">
+				<h3 itemprop="name">Art</h3>
+				<p itemprop="description">I still enjoy life-drawing and frequently go to classes to keep my drawing sharp. During breaks you could find me sketching or folding a paper butterfly.</p>
+			</div>
+
+			<div itemprop="itemListElement" itemscope itemtype="http://schema.org/Thing">
+				<h3 itemprop="name">Computers</h3>
+				<p itemprop="description">Most of my spare time is spent with computers and electronics, learning new things and immersing myself in their world.</p>
+			</div>
+
+			<div itemprop="itemListElement" itemscope itemtype="http://schema.org/Thing">
+				<h3 itemprop="name">Gaming</h3>
+				<p itemprop="description">The progressive problem-solving nature of real-time strategy games makes them my ‘go-to’, but I also enjoy a few casual action and first-person shooters.</p>
+			</div>
 		</section>
 
 	</article>
