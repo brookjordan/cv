@@ -1,6 +1,8 @@
 body {
 	font-size: 1.2em;
 
+	font-family: "Quicksand", sans-serif;
+
 	@media ( min-width: 1300px ) {
 		font-size: 1.5em;
 	}
@@ -30,7 +32,16 @@ h4 {
 	//	For job titles
 	h3 + div time + & {
 		margin-top: 0em;
+
+		font-weight: 100;
 	}
+}
+
+h1, h2 {
+	font-size: 1.4em;
+}
+h3, h4 {
+	font-size: 1.1em;
 }
 
 time {
@@ -47,7 +58,7 @@ time {
 p {
 	margin-top: 1em;
 
-	font-family: serif;
+	font-family: "Vollkorn", serif;
 
 	h3 + & {
 		margin-top: 0.2em;

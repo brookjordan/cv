@@ -5,11 +5,15 @@ module.exports = function(grunt) {
 
 
 	addTask( 'default', [
-			'copy',
+			'copy:svgs', 'copy:dump', 'copy:baseHTML',
+
+			'sass:inline', 'autoprefixer:inline',
+			'sass:referenced', 'autoprefixer:referenced',
+
 			'processhtml', 'relativeRoot', 'htmlmin',
-			'sass', 'autoprefixer',
+
 			'newer:imagemin',
-			'watch'
+			'watch',
 		]);
 
 	//addTask( 'refresh', ['clean'], 'default' );
@@ -24,7 +28,7 @@ module.exports = function(grunt) {
 		processhtml: {
 
 			options: {
-				includeBase: 'project/src/templates',
+				includeBase: 'project/temp/templates',
 				recursive: true,
 			},
 
@@ -115,13 +119,24 @@ module.exports = function(grunt) {
 				sourceMapContents: true,
 			},
 
-			dist: {
+			inline: {
 				files: [{
 					expand: true,
 
-					cwd: 'project/src/styles/',
+					cwd: 'project/src/styles/inline',
 					src: '**/*.scss',
-					dest: 'project/temp/styles/compiled',
+					dest: 'project/temp/styles/inline/compiled',
+					ext: '.min.css',
+				}],
+			},
+
+			referenced: {
+				files: [{
+					expand: true,
+
+					cwd: 'project/src/styles/referenced',
+					src: '**/*.scss',
+					dest: 'project/temp/styles/referenced/compiled',
 					ext: '.min.css',
 				}],
 			},
@@ -135,13 +150,25 @@ module.exports = function(grunt) {
 				browsers: ['last 10 versions', 'ie 8', 'ie 9'],
 				map: true
 			},
-			dist: {
+
+			inline: {
 				files: [{
 					expand: true,
 
-					cwd: 'project/temp/styles/compiled',
+					cwd: 'project/temp/styles/inline/compiled',
 					src: '**/*.css',
-					dest: 'project/build/css',
+					dest: 'project/temp/templates/styles',
+					ext: '.min.css',
+				}],
+			},
+
+			referenced: {
+				files: [{
+					expand: true,
+
+					cwd: 'project/temp/styles/referenced/compiled',
+					src: '**/*.css',
+					dest: 'project/build/styles',
 					ext: '.min.css',
 				}],
 			},
@@ -158,21 +185,30 @@ module.exports = function(grunt) {
 
 		//	Copy files that aren't processed
 		copy: {
+			baseHTML: {
+				files: [
+					{
+						expand: true,
+						cwd: 'project/src/pages/',
+						src: ['**/*.*'],
+						dest: 'project/temp/pages/base',
+					},
+				],
+			},
+
 			dump: {
 				files: [
-					// includes files within path
 					{
 						expand: true,
 						cwd: 'project/src/dump/',
 						src: ['**/*.*'],
-						dest: '',
+						dest: 'project/build',
 					},
 				],
 			},
 
 			svgs: {
 				files: [
-					// includes files within path
 					{
 						expand: true,
 						cwd: 'project/src/images/',
@@ -197,9 +233,14 @@ module.exports = function(grunt) {
 				tasks: [ 'processhtml', 'relativeRoot', 'htmlmin', ]
 			},
 
-			styles: {
-				files: [ 'project/src/styles/**/*.scss' ],
-				tasks: [ 'sass', 'autoprefixer', ]
+			styles__inline: {
+				files: [ 'project/src/styles/inline/**/*.scss' ],
+				tasks: [ 'sass:inline', 'autoprefixer:inline', 'processhtml', 'relativeRoot', 'htmlmin', ]
+			},
+
+			styles__referenced: {
+				files: [ 'project/src/styles/referenced/**/*.scss' ],
+				tasks: [ 'sass:referenced', 'autoprefixer:referenced', ]
 			},
 
 			images: {
